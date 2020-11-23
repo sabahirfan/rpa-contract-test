@@ -1,5 +1,5 @@
 {
-  "name": "rpe-expressjs-template",
+  "name": "rpa-contract-test-rpa-contract",
   "version": "0.0.1",
   "private": true,
   "engines": {
@@ -18,7 +18,9 @@
     "sonar-scan": "sonar-scanner",
     "test:smoke": "echo 'TODO add smoke tests' && exit 1",
     "test:functional": "echo 'TODO add functional tests' && exit 1",
-    "cichecks": "yarn && yarn build && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y"
+    "cichecks": "yarn && yarn build && yarn lint  && yarn test && yarn test:routes &&  yarn test:a11y",
+    "pact:providerTests": "node src/test/pact/rpa-contract.pact.test.js",
+    "test:pact": "start-server-and-test start http://localhost:3200 pact:providerTests"
   },
   "dependencies": {
     "@hmcts/info-provider": "^1.0.0",
@@ -53,7 +55,8 @@
     "serve-favicon": "^2.5.0",
     "ts-node": "^9.0.0",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^4.0.5"
+    "typescript": "^4.0.5",
+    "@pact-foundation/pact": "^9.11.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -97,6 +100,8 @@
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.7.2",
-    "webpack-node-externals": "^1.7.2"
+    "webpack-node-externals": "^1.7.2",
+    "@pact-foundation/pact": "^9.11.1",
+    "start-server-and-test": "^1.7.5"
   }
 }

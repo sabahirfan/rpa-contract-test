@@ -1,0 +1,11 @@
+apiVersion: v2
+appVersion: "1.0"
+description: A Helm chart for rpa-contract-test-rpa-contract App
+name: rpa-contract-test-rpa-contract
+home: https://github.com/hmcts/rpa-contract-test-rpa-contract
+version: 0.0.1
+dependencies:
+  - name: nodejs
+    version: 2.3.4
+    repository: '@hmctspublic'
+
