@@ -31,6 +31,11 @@ $ yarn start
 
 The applications's home page will be available at https://localhost:3200
 
+Run application and pact verifier:
+
+```bash
+$ yarn test:pact
+```
 ### Running with Docker
 
 Create docker image:
